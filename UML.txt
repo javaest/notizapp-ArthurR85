@@ -1,0 +1,51 @@
++--------------------------------------+
+|         DigitalNotebookApplication   |
+|--------------------------------------|
+| + main(String[] args) : void         |
++--------------------------------------+
+
+        |
+        | extends
+        v
+
++--------------------------------------+
+|               Note                   |
+|--------------------------------------|
+| - id : Long                          |
+| - title : String                     |
+| - content : String                   |
+| - creator : String                   |
+|--------------------------------------|
+| + getId() : Long                     |
+| + setId(Long id) : void              |
+| + getTitle() : String                |
+| + setTitle(String title) : void      |
+| + getContent() : String              |
+| + setContent(String content) : void  |
+| + getCreator() : String              |
+| + setCreator(String creator) : void  |
++--------------------------------------+
+
+        |
+        | uses
+        v
+
++--------------------------------------+
+|            NoteController            |
+|--------------------------------------|
+| - noteRepository : NoteRepository    |
+|--------------------------------------|
+| + createNote(Note note) : Note       |
+| + listNotes() : List<Note>           |
++--------------------------------------+
+
+        |
+        | uses
+        v
+
++--------------------------------------+
+|            NoteRepository            |
+|--------------------------------------|
+| + save(Note note) : Note             |
+| + findAll() : List<Note>             |
++--------------------------------------+
